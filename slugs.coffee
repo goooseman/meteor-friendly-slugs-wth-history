@@ -182,8 +182,7 @@ Mongo.Collection.prototype.friendlySlugs = (options = {}) ->
       ).fetch()
 
       fsDebug(opts,result,'Highest indexed base found')
-
-      if !result?
+      if _.isEmpty result
         index = 0
       else
         indexesArr = []
